@@ -4,26 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/phosphor-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Google</title>
 </head>
 <body>
-    <header class="w-full h-12 flex items-center justify-end gap-6">
-        <a class="text-[#707070] hover:underline hover:underline-offset-1 hover:text-[#484848]" href="#">Gmail</a>
-        <a class="text-[#707070] hover:underline hover:underline-offset-1 hover:text-[#484848]" href="#">Imagens</a>
-
-        <div class="h-9 w-9 flex items-center justify-center cursor-pointer hover:bg-gray-400 hover:rounded-full">
-            <i class="ph-dots-nine-bold text-[1.7rem]"></i>
+    <header class="w-full h-12 alinhamento justify-end gap-6">
+        <div id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
+            <a id="gmailTodas" class="colorText marginY underline-offset-[14px] sm:hover:underline sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Gmail</a>
+            <a class="colorText sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Imagens</a>
+            <i id="menuIcon" class="ph-list-bold absolute left-2 text-lg"></i>
         </div>
 
-        <div class="h-8 w-8 cursor-pointer mr-4">
+        <div class="h-10 w-12 alinhamento justify-center cursor-pointer sm:hover:bg-gray-400 sm:hover:rounded-full ">
+            <i id="googleApps" class="ph-dots-nine-bold text-[1.7rem]"></i>
+        </div>
+
+        <div class="w-12 sm:h-8 sm:w-8 cursor-pointer mr-4">
             <img 
                 src="https://avatars.githubusercontent.com/u/90356500?v=4" 
                 alt="Imagem de perfil do google"
-                class="rounded-full"    
+                class="rounded-full"
             >
         </div>
+        
+        <div id="app" class="bg-[#333] hidden max-h-[24.5rem] w-80 sm:max-h-[30rem] sm:w-[22rem] absolute top-14 right-4 rounded overflow-x-hidden overflow-scroll">
+            <div class="alinhamento justify-around mx-6 my-2">
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://avatars.githubusercontent.com/u/90356500?v=4')]"></div>
+                    </div>
+                    Conta
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/355037/google.svg')]"></div>
+                    </div>
+                    Pesquisa
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353819/google-maps.svg')]"></div>
+                    </div>
+                    Maps
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 my-2">
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/13671/youtube.svg')]"></div>
+                    </div>
+                    Youtube
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/349393/google-play.svg')]"></div>
+                    </div>
+                    Play
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/d/da/20190930154509%21Google_News_icon.svg/120px-Google_News_icon.svg.png')]"></div>
+                    </div>
+                    Notícias
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 my-2">
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/349378/gmail.svg')]"></div>
+                    </div>
+                    Gmail
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/343559/google-meet-meeting-communication-team.svg')]"></div>
+                    </div>
+                    Meet
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/d/de/20201126121044%21Google_Chat_icon_%282020%29.svg/120px-Google_Chat_icon_%282020%29.svg.png')]"></div>
+                    </div>
+                    Chat
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 my-2">
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/9/93/20181217005431%21Google_Contacts_icon.svg/120px-Google_Contacts_icon.svg.png')]"></div>
+                    </div>
+                    Contato
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/223038/drive.svg')]"></div>
+                    </div>
+                    Drive
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353803/google-calendar.svg')]"></div>
+                    </div>
+                    Agenda
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 my-2">
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/223044/translate-language.svg')]"></div>
+                    </div>
+                    Tradutor
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353826/google-photos.svg')]"></div>
+                    </div>
+                    Fotos
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/f/f9/20200824083139%21Google_Duo_icon.svg/119px-Google_Duo_icon.svg.png')]"></div>
+                    </div>
+                    Duo
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 my-2">
+                <div id="chrome" class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/378781/chrome.svg')]"></div>
+                    </div>
+                    Chrome
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20 hover:bg-[#222] rounded  cursor-pointer text-center text-white">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                        <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_Shopping.svg/120px-Google_Shopping.svg.png?20201101141923')]"></div>
+                    </div>
+                    Shopping
+                </div>
+                <div class="w-20 h-20 sm:h-[102px] sm:w-20">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100 h-1 border border-bg-white"></div>
+        </div>
     </header>
+
+    <script src="script.js"></script>
 </body>
 </html>

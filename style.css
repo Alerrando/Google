@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  .corText{
+    color: #707070
+  }
+
+  .alinhamento {
+    display: flex;
+    align-items: center;
+  }
+
+  .marginY{
+    margin: 0 1.5rem 0 3rem;
+  }
+}
