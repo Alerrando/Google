@@ -11,11 +11,12 @@
 </head>
 <body>
     <header class="w-full h-12 alinhamento justify-end gap-6">
-        <div id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
+        <nav id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
             <a id="gmailTodas" class="colorText marginY underline-offset-[14px] sm:hover:underline sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Gmail</a>
             <a class="colorText sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Imagens</a>
-            <i id="menuIcon" class="ph-list-bold absolute left-2 text-lg"></i>
-        </div>
+            <i id="menuIcon" class="ph-list-bold absolute top-3 left-2 text-lg"></i>
+
+        </nav>
 
         <div class="h-10 w-12 alinhamento justify-center cursor-pointer sm:hover:bg-gray-400 sm:hover:rounded-full ">
             <i id="googleApps" class="ph-dots-nine-bold text-[1.7rem]"></i>
@@ -367,6 +368,32 @@
             </div>
         </div>
     </header>
+
+    <main class="h-48 w-100 sm:60 text-center">
+        <div class="h-full">
+            <div class="h-32 sm:h-56 alinhamento justify-center">
+                <img 
+                    src="https://www.svgrepo.com/show/353798/google.svg" 
+                    alt="logo da google"
+                    class="h-full cursor-pointer"
+                >
+            </div>
+
+            <div class="relative bottom-6 alinhamento w-full sm:w-4/12 sm:mx-auto py-1 sm:py-2 border-2 border-zinc-400 rounded-full">
+                <i class="ph-magnifying-glass-bold text-xl px-[13px]"></i>
+
+                <div class="flex-1">
+                    <form action="http://google.com/search" method="GET">
+                        <label for="txtbusca"></label>
+                        <input type="text" name="q" id="txtbusca" class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none">
+                    </form>
+
+                </div>
+
+                <i class="ph-microphone-bold text-xl px-[13px]"></i>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

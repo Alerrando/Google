@@ -21,21 +21,20 @@ googleApps.addEventListener("click", () => {
 function mudarTextHeader(){
     const menuIcon = document.querySelector("#menuIcon");
     const chrome = document.querySelector("#chrome");
-
+    menuIcon.style.display = "none";
     let largura = window.innerWidth;
 
     if(largura <= 640)
     {
         gmailOuTodas[0].innerHTML = "Todas";
         gmailOuTodas[0].classList.add("underline");
-        menuIcon.style.display = "block"
+        menuIcon.style.display = "block";
         chrome.style.display = "none"
     }
     else
     {
         gmailOuTodas[0].innerHTML = "Gmail";
         gmailOuTodas[0].classList.remove("underline");
-        menuIcon.style.display = "none";
         chrome.style.display = "block"
     }
 }
