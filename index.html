@@ -10,19 +10,19 @@
     <title>Google</title>
 </head>
 <body>
-    <header class="w-full h-12 alinhamento justify-end gap-6">
+    <header class="w-full h-12 alinhamento justify-end mt-2 gap-4">
         <nav id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
             <a id="gmailTodas" class="colorText marginY underline-offset-[14px] sm:hover:underline sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Gmail</a>
             <a class="colorText sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Imagens</a>
-            <i id="menuIcon" class="ph-list-bold absolute top-3 left-2 text-lg"></i>
+            <i id="menuIcon" class="ph-list-bold absolute top-5 left-2 text-lg"></i>
 
         </nav>
 
-        <div class="h-10 w-12 alinhamento justify-center cursor-pointer sm:hover:bg-gray-400 sm:hover:rounded-full ">
+        <div id="containerApp" class="h-10 w-12 alinhamento justify-center cursor-pointer sm:hover:bg-gray-400 sm:hover:rounded-full ">
             <i id="googleApps" class="ph-dots-nine-bold text-[1.7rem]"></i>
         </div>
 
-        <div class="w-12 sm:h-8 sm:w-8 cursor-pointer mr-4">
+        <div class="alinhamento w-12 sm:h-10 sm:w-10 justify-center cursor-pointer mr-4">
             <img 
                 src="https://avatars.githubusercontent.com/u/90356500?v=4" 
                 alt="Imagem de perfil do google"
@@ -30,7 +30,7 @@
             >
         </div>
         
-        <div id="app" class="bg-[#333] hidden max-h-[27rem] w-80 sm:max-h-[30rem] sm:w-[22rem] absolute top-14 right-4 rounded overflow-x-hidden overflow-scroll">
+        <div id="app" class="bg-[#333] hidden max-h-[27rem] w-72 sm:max-h-[30rem] sm:w-[22rem] absolute top-16 sm:top-14 right-4 rounded overflow-x-hidden overflow-scroll z-50">
             <div class="alinhamento justify-around mx-6 mb-2 mt-4">
                 <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
                     <a href="https://myaccount.google.com/?utm_source=OGB&utm_medium=app" target="_blank">
@@ -369,30 +369,44 @@
         </div>
     </header>
 
-    <main class="h-48 w-100 sm:60 text-center">
-        <div class="h-full">
-            <div class="h-32 sm:h-56 alinhamento justify-center">
-                <img 
-                    src="https://www.svgrepo.com/show/353798/google.svg" 
-                    alt="logo da google"
-                    class="h-full cursor-pointer"
-                >
-            </div>
+    <main class="h-[58vh] w-100 sm:h-[77.7vh] text-center">
+        <div class="h-32 alinhamento justify-center">
+            <img 
+                src="https://www.svgrepo.com/show/353798/google.svg" 
+                alt="logo da google"
+                class="h-40 sm:h-80 cursor-pointer"
+            >
+        </div>
 
-            <div class="relative bottom-6 alinhamento w-full sm:w-4/12 sm:mx-auto py-1 sm:py-2 border-2 border-zinc-400 rounded-full">
+        <form action="http://google.com/search" method="GET">
+            <div class="alinhamento w-full sm:w-5/12 sm:mx-auto py-1 sm:py-2 sm:mt-8 border-2 border-zinc-400 rounded-full">
                 <i class="ph-magnifying-glass-bold text-xl px-[13px]"></i>
 
                 <div class="flex-1">
-                    <form action="http://google.com/search" method="GET">
-                        <label for="txtbusca"></label>
-                        <input type="text" name="q" id="txtbusca" class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none">
-                    </form>
-
+                    <label for="txtbusca"></label>
+                    <input type="text" name="q" id="txtbusca" class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none">
+                        
                 </div>
 
                 <i class="ph-microphone-bold text-xl px-[13px]"></i>
             </div>
-        </div>
+
+            <div class="alinhamento justify-center mt-7 w-full">
+                <input
+                    type="submit" 
+                    class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md mr-4 border border-transparent hover:border-solid hover:border-[#5f6368]"
+                    value="Pesquisa Google"
+                    role="button"
+                >
+                <a href="https://www.google.com/doodles" target="_blank">
+                    <input
+                        type="button" 
+                        class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md cursor-pointer border border-transparent hover:border-solid hover:border-[#5f6368]"
+                        value="Estou com sorte"
+                    >
+                </a>
+            </div>
+        </form>
     </main>
 
     <script src="script.js"></script>

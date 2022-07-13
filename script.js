@@ -1,5 +1,6 @@
 const gmailOuTodas = document.querySelectorAll("#gmailTodas");
 const googleApps = document.querySelector("#googleApps");
+const apps = document.querySelector("#app");
 
 window.addEventListener("load",() => {
     mudarTextHeader()
@@ -9,14 +10,23 @@ window.addEventListener("resize", () => {
     mudarTextHeader()
 })
 
-googleApps.addEventListener("click", () => {
-    const apps = document.querySelector("#app");
-
-    if(apps.style.display == "block")
-        apps.style.display = "none"
-    else
-        apps.style.display = "block";
+document.addEventListener("click", (e) => {
+    verificarClick(e.target)
 })
+
+function verificarClick(elemento){
+    console.log(elemento)
+    if(elemento == googleApps)
+    {
+        if(apps.style.display == "block")
+            apps.style.display = "none"
+        else
+            apps.style.display = "block";
+    }
+    else
+        apps.style.display = "none";
+}
+
 
 function mudarTextHeader(){
     const menuIcon = document.querySelector("#menuIcon");
