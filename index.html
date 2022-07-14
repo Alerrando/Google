@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Google</title>
 </head>
-<body>
+<body class="overflow-x">
     <header class="w-full h-12 alinhamento justify-end mt-2 gap-4">
         <nav id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
             <a id="gmailTodas" class="colorText marginY underline-offset-[14px] sm:hover:underline sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Gmail</a>
@@ -370,7 +370,7 @@
         </div>
     </header>
 
-    <main class="h-[58vh] w-100 sm:h-[77.7vh] text-center">
+    <main class="h-[73vh] w-100 sm:h-[77.7vh] text-center">
         <div class="h-32 alinhamento justify-center">
             <img 
                 src="https://www.svgrepo.com/show/353798/google.svg" 
@@ -410,18 +410,22 @@
         </form>
     </main>
 
-    <footer class="w-full sm:h-24 bg-[#f2f2f2] text-base">
-        <div class="px-[30px] pt-[15px]">
+    <footer class="w-full sm:h-24 bg-[#f2f2f2] text-xs sm:text-base">
+        <div class="px-[30px] pt-[15px] opacity-40">
             Brasil
         </div>
 
-        <div class="w-100 h-[1px] bg-[#e4e4e4] my-2"></div>
+        <div class="w-100 h-[1px] bg-[#e4e4e4] mt-2 mb-5 sm:mb-3 sm:my-2"></div>
 
-        <div class="alinhamento justify-between px-[30px] pb-1.5">
-            <ul class="flex gap-8">
+        <div class="w-100 sm:hidden h-[1px] bg-[#e4e4e4] my-2"></div>
+
+        <div class="sm:alinhamento sm:justify-between sm:px-[38px]">
+            <ul class="grid grid-rows-3 grid-cols-10 sm:flex sm:gap-8 sm:text-[17.5px] opacity-40">
+                <h4 class="col-span-3 row-span-1 sm:hidden">Mudar tema: <span>Claro</span></h4>
+
                 <a 
                     href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-8 col-end-9 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Sobre
@@ -429,7 +433,7 @@
 
                 <a 
                     href="https://ads.google.com/intl/pt-BR_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-3 col-end-4 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Publicidade
@@ -437,7 +441,7 @@
 
                 <a 
                     href="https://smallbusiness.withgoogle.com/intl/pt-BR_br/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=BR#!/" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-6 col-end-7 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Negócios
@@ -445,38 +449,37 @@
 
                 <a 
                     href="https://www.google.com/search/howsearchworks/?fg=1" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="hidden sm:block sm:mr-[36rem] sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Como funciona a pesquisa
                 </a>
-            </ul>
 
-            <div class="flex gap-8">
                 <a 
                     href="https://policies.google.com/privacy?hl=pt-BR&fg=1" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-8 col-end-9 row-start-1 row-end-1 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Privicidade
                 </a>
-
+    
                 <a 
                     href="https://policies.google.com/terms?hl=pt-BR&fg=1" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-10 col-end-10 row-start-1 row-end-1 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Termos
                 </a>
-
+    
                 <a 
                     href="#" 
-                    class="sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-5 col-end-6 row-start-1 row-end-1 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Configurações
                 </a>
-            </div>
+            </ul>
+
         </div>
     </footer>
 
