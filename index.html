@@ -14,8 +14,7 @@
         <nav id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
             <a id="gmailTodas" class="colorText marginY underline-offset-[14px] sm:hover:underline sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Gmail</a>
             <a class="colorText sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Imagens</a>
-            <i id="menuIcon" class="ph-list-bold absolute top-5 left-2 text-lg"></i>
-
+            <i id="menuIcon" class="ph-list-bold block sm:hidden absolute top-5 left-2 cursor-pointer text-lg"></i>
         </nav>
 
         <div id="containerApp" class="h-10 w-12 alinhamento justify-center cursor-pointer sm:hover:bg-gray-400 sm:hover:rounded-full ">
@@ -370,6 +369,77 @@
         </div>
     </header>
 
+    <section id="menu" class="w-60 h-screen z-50 sm:hidden absolute top-0 right-[28rem] bg-[#fff]">
+        <div class="alinhamento w-24 h-12">
+            <img 
+                src="https://www.svgrepo.com/show/303183/google-2015-logo.svg" 
+                alt="logo da google miniatura"
+                class="w-full h-20"
+            >
+        </div>
+        <div class="alinhamento">
+            <ul class="w-full text-base">
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-house-bold"></i>
+                    Página inicial
+                </li>
+                
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-clock-counter-clockwise-bold"></i>
+                    Histórico de pesquisa
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-bookmarks-simple-bold"></i>
+                    Coleções
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-binoculars-bold"></i>
+                    Pesquisa off-line
+                </li>
+
+                <div class="w-100 h-[1px] bg-[#b8b8b8] my-2"></div>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-gear-bold"></i>
+                    Configurações
+                </li>
+                
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-shield-bold"></i>
+                    Seus dados de pesquisa
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-eye-bold"></i>
+                    Ocultar resultados com conteudo explicito: Ativado
+                </li>
+
+                <li id="tema" class="alinhamento w-full gap-3 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-sun-bold"></i>
+                    Tema escuro: <h4 id="whiteDark">Ativado</h4> 
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-file-search-bold"></i>
+                    Como funciona a pesquisa
+                </li>
+                
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-question-bold"></i>
+                    Ajuda
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-chat-bold"></i>
+                    Enviar feedback
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
     <main class="h-[73vh] w-100 sm:h-[77.7vh] text-center">
         <div class="h-32 alinhamento justify-center">
             <img 
@@ -380,13 +450,12 @@
         </div>
 
         <form action="http://google.com/search" method="GET">
-            <div class="alinhamento w-full sm:w-5/12 sm:mx-auto py-1 sm:py-2 sm:mt-8 border-2 border-zinc-400 rounded-full">
+            <div class="alinhamento w-full sm:w-5/12 sm:mx-auto py-1 sm:py-2 sm:mt-8 opacity-30 border-2 border-zinc-400 hover:border-2 hover:border-zinc-900 rounded-full">
                 <i class="ph-magnifying-glass-bold text-xl px-[13px]"></i>
 
                 <div class="flex-1">
                     <label for="txtbusca"></label>
                     <input type="text" name="q" id="txtbusca" class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none">
-                        
                 </div>
 
                 <i class="ph-microphone-bold text-xl px-[13px]"></i>
@@ -398,12 +467,14 @@
                     class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md mr-4 border border-transparent hover:border-solid hover:border-[#5f6368]"
                     value="Pesquisa Google"
                     role="button"
+                    id="inputBotao"
                 >
                 <a href="https://www.google.com/doodles" target="_blank">
                     <input
                         type="button" 
                         class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md cursor-pointer border border-transparent hover:border-solid hover:border-[#5f6368]"
                         value="Estou com sorte"
+                        id="inputBotao"
                     >
                 </a>
             </div>
@@ -415,9 +486,9 @@
             Brasil
         </div>
 
-        <div class="w-100 h-[1px] bg-[#e4e4e4] mt-2 mb-5 sm:mb-3 sm:my-2"></div>
+        <div id="barra" class="w-100 h-[1px] bg-[#e4e4e4] mt-2 mb-5 sm:mb-3 sm:my-2"></div>
 
-        <div class="w-100 sm:hidden h-[1px] bg-[#e4e4e4] my-2"></div>
+        <div id="barra" class="w-100 sm:hidden h-[1px] bg-[#e4e4e4] my-2"></div>
 
         <div class="sm:alinhamento sm:justify-between sm:px-[38px]">
             <ul class="grid grid-rows-3 grid-cols-10 sm:flex sm:gap-8 sm:text-[17.5px] opacity-40">
@@ -449,7 +520,7 @@
 
                 <a 
                     href="https://www.google.com/search/howsearchworks/?fg=1" 
-                    class="hidden sm:block sm:mr-[36rem] sm:hover:underline sm:hover:underline-offset-2"
+                    class="hidden sm:block sm:mr-[35rem] sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Como funciona a pesquisa
