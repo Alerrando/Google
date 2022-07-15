@@ -66,7 +66,7 @@ function verificarClick(elemento){
         menuClick(header, main, footer);
     else
     {
-        menu.style.right = "28rem";
+        menu.style.left = "28rem";
         header.style.opacity = main.style.opacity = footer.style.opacity = "1"
     }
 
@@ -91,9 +91,9 @@ function googleAppsClick(){
 }
 
 function menuClick(header, main, footer){
-    if(menu.style.right == "28rem" || menu.style.right == "")
+    if(menu.style.left == "28rem" || menu.style.left == "")
     {
-        menu.style.right = "11rem";
+        menu.style.left = "0";
         menu.style.transition = "all 0.5s";
         menu.style.opacity = "1"
         header.style.opacity = main.style.opacity = footer.style.opacity = "0.3";

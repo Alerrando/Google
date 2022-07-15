@@ -369,7 +369,7 @@
         </div>
     </header>
 
-    <section id="menu" class="w-60 h-screen z-50 sm:hidden absolute top-0 right-[28rem] bg-[#fff]">
+    <section id="menu" class="w-60 h-screen z-50 sm:hidden absolute top-0 left-[28rem] bg-[#fff]">
         <div class="alinhamento w-24 h-12">
             <img 
                 src="https://www.svgrepo.com/show/303183/google-2015-logo.svg" 
@@ -449,13 +449,21 @@
             >
         </div>
 
-        <form action="http://google.com/search" method="GET">
+        <form action="http://google.com/search" method="GET" id="enviar">
             <div class="alinhamento w-full sm:w-5/12 sm:mx-auto py-1 sm:py-2 sm:mt-8 opacity-30 border-2 border-zinc-400 hover:border-2 hover:border-zinc-900 rounded-full">
                 <i class="ph-magnifying-glass-bold text-xl px-[13px]"></i>
 
                 <div class="flex-1">
-                    <label for="txtbusca"></label>
-                    <input type="text" name="q" id="txtbusca" class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none">
+                    <label for="enviar"></label>
+                    <input 
+                        type="text" 
+                        name="q" 
+                        id="enviar" 
+                        class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none"
+                        autocomplete="on"
+                        autocorrect="on"
+                        autofocus
+                    >
                 </div>
 
                 <i class="ph-microphone-bold text-xl px-[13px]"></i>
@@ -466,11 +474,6 @@
                     type="submit" 
                     class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md mr-4 border border-transparent hover:border-solid hover:border-[#5f6368]"
                     value="Pesquisa Google"
-                    autocapitalize="false"
-                    autocomplete="off"
-                    autocorrect="off"
-                    autofocus
-                    spellcheck="false"
                     role="button"
                     id="inputBotao"
                 >
