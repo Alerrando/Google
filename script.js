@@ -3,8 +3,10 @@ const googleApps = document.querySelector("#googleApps");
 const apps = document.querySelector("#app");
 const menuIcon = document.querySelector("#menuIcon");
 const menu = document.querySelector("#menu");
-const tema = document.querySelector("#tema");
+const tema = document.querySelectorAll("#tema");
 const footer = document.querySelector("footer");
+const conf = document.querySelector("#configMenu")
+const menuConfig = document.querySelector("#menuConfig");
 
 window.addEventListener("load",() => {
     mudarTextHeader()
@@ -18,25 +20,37 @@ document.addEventListener("click", (e) => {
     verificarClick(e.target)
 })
 
-tema.addEventListener("click", () => {
-    mudarTema()
-})
+for (let index = 0; index < tema.length; index++) {
+    tema[index].addEventListener("click", () => {
+        mudarTema()
+    })
+}
 
 function mudarTema(){
-    const temaDarkWhite = document.querySelector("#whiteDark");
+    const temaDarkWhite = document.querySelectorAll("#whiteDark");
     const inputB = document.querySelectorAll("#inputBotao");
     const barras = document.querySelectorAll("#barra")
 
-    document.body.style.backgroundColor = menu.style.backgroundColor = "#202124";
-    document.body.style.color = menu.style.color = "#fff"
-    inputB[0].style.backgroundColor = inputB[1].style.backgroundColor = "#303134"
-    footer.style.backgroundColor = "#121212"
-    barras[0].style.backgroundColor = barras[1].style.backgroundColor ="#bdc1c6"
-
-    if(temaDarkWhite.innerHTML == "Ativado")
-        temaDarkWhite.innerHTML = "Desativado"
-    else
-        temaDarkWhite.innerHTML = "Ativado"
+    for (let index = 0; index < temaDarkWhite.length; index++) {
+        if(temaDarkWhite[index].innerHTML == "Ativado")
+        {
+            temaDarkWhite[index].innerHTML = "Desativado"
+            document.body.style.backgroundColor = menu.style.backgroundColor= menuConfig.style.backgroundColor = "#fff";
+            document.body.style.color = menu.style.color = "#484848"
+            inputB[0].style.backgroundColor = inputB[1].style.backgroundColor = footer.style.backgroundColor = "#f2f2f2"
+            menuConfig.style.color = "#000";
+            barras[0].style.opacity = barras[1].style.opacity = "0.30"
+        }
+        else
+        {
+            temaDarkWhite[index].innerHTML = "Ativado"
+            document.body.style.backgroundColor = menu.style.backgroundColor= menuConfig.style.backgroundColor = "#202124";
+            document.body.style.color = menu.style.color = menuConfig.color = "#fff"
+            inputB[0].style.backgroundColor = inputB[1].style.backgroundColor = "#303134"
+            footer.style.backgroundColor = "#121212"
+        }
+        
+    }
 }
 
 function verificarClick(elemento){
@@ -55,6 +69,18 @@ function verificarClick(elemento){
         menu.style.right = "28rem";
         header.style.opacity = main.style.opacity = footer.style.opacity = "1"
     }
+
+    if(elemento == conf)
+        menuConfigClick()
+    else
+        menuConfig.style.display = "none"
+}
+
+function menuConfigClick(){
+    if(menuConfig.style.display == "block")
+        menuConfig.style.display = "none"
+    else
+        menuConfig.style.display = "block"
 }
 
 function googleAppsClick(){

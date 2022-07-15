@@ -276,7 +276,7 @@
                 <div class="w-20 h-24 sm:h-[110px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
                     <a href="https://classroom.google.com/u/0/h" target="_blank">
                         <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
-                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://cdn-icons.flaticon.com/png/512/720/premium/720307.png?token=exp=1657587567~hmac=aaf18aa243fca6fcd9f892e5eebb8a78')]"></div>
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/2/25/20201023125915%21Google_Classroom_icon.svg/120px-Google_Classroom_icon.svg.png')]"></div>
                         </div>
                         Sala
                         de Aula        
@@ -418,7 +418,7 @@
 
                 <li id="tema" class="alinhamento w-full gap-3 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
                     <i class="ph-sun-bold"></i>
-                    Tema escuro: <h4 id="whiteDark">Ativado</h4> 
+                    Tema escuro: <h4 id="whiteDark">Desativado</h4> 
                 </li>
 
                 <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
@@ -482,7 +482,7 @@
     </main>
 
     <footer class="w-full sm:h-24 bg-[#f2f2f2] text-xs sm:text-base">
-        <div class="px-[30px] pt-[15px] opacity-40">
+        <div class="px-[32px] pt-[10px] sm:text-[18px] opacity-40">
             Brasil
         </div>
 
@@ -491,12 +491,14 @@
         <div id="barra" class="w-100 sm:hidden h-[1px] bg-[#e4e4e4] my-2"></div>
 
         <div class="sm:alinhamento sm:justify-between sm:px-[38px]">
-            <ul class="grid grid-rows-3 grid-cols-10 sm:flex sm:gap-8 sm:text-[17.5px] opacity-40">
-                <h4 class="col-span-3 row-span-1 sm:hidden">Mudar tema: <span>Claro</span></h4>
+            <ul class="grid grid-rows-5 grid-cols-12 sm:flex sm:gap-8 sm:text-base opacity-40">
+                <h4 id="tema" class="col-start-4 col-end-8 row-span-1 sm:hidden cursor-pointer">
+                    Tema escuro: <span id="whiteDark">Desativado</span>
+                </h4>
 
                 <a 
                     href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1" 
-                    class="col-start-8 col-end-9 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-10 col-end-11 row-start-5 row-end-5 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Sobre
@@ -504,7 +506,7 @@
 
                 <a 
                     href="https://ads.google.com/intl/pt-BR_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" 
-                    class="col-start-3 col-end-4 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-4 col-end-6 row-start-5 row-end-5 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Publicidade
@@ -512,7 +514,7 @@
 
                 <a 
                     href="https://smallbusiness.withgoogle.com/intl/pt-BR_br/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=BR#!/" 
-                    class="col-start-6 col-end-7 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-7 col-end-8 row-start-5 row-end-5 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Negócios
@@ -520,7 +522,7 @@
 
                 <a 
                     href="https://www.google.com/search/howsearchworks/?fg=1" 
-                    class="hidden sm:block sm:mr-[35rem] sm:hover:underline sm:hover:underline-offset-2"
+                    class="hidden sm:block sm:mr-[40rem] sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Como funciona a pesquisa
@@ -528,7 +530,7 @@
 
                 <a 
                     href="https://policies.google.com/privacy?hl=pt-BR&fg=1" 
-                    class="col-start-8 col-end-9 row-start-1 row-end-1 sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-5 col-end-7 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Privicidade
@@ -536,21 +538,66 @@
     
                 <a 
                     href="https://policies.google.com/terms?hl=pt-BR&fg=1" 
-                    class="col-start-10 col-end-10 row-start-1 row-end-1 sm:hover:underline sm:hover:underline-offset-2"
+                    class="col-start-8 col-end-9 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
                     target="_blank"
                 >
                 Termos
                 </a>
     
-                <a 
-                    href="#" 
-                    class="col-start-5 col-end-6 row-start-1 row-end-1 sm:hover:underline sm:hover:underline-offset-2"
-                    target="_blank"
+                <h4
+                    class="col-start-9 col-end-10 row-start-1 row-end-1 cursor-pointer sm:hover:underline sm:hover:underline-offset-2"
+                    id="configMenu"
                 >
                 Configurações
-                </a>
+                </h4>
             </ul>
+        </div>
 
+        <div id="menuConfig" class="absolute hidden w-48 sm:w-60 h-58 bottom-32 sm:bottom-14 right-7 bg-[#fff] border shadow rounded-xl">
+            <ul class="my-2 text-[12px] sm:text-base">
+                <a href="https://www.google.com/preferences?hl=pt-BR&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Configurações de Pesquisa
+                    </li>
+                </a>
+    
+                <a href="https://www.google.com/advanced_search?hl=pt-BR&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Pesquisa Avançada
+                    </li>
+                </a>
+    
+                <a href="https://myactivity.google.com/privacyadvisor/search?utm_source=googlemenu&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Seus dados na Pesquisa
+                    </li>
+                </a>
+    
+                <a href="https://myactivity.google.com/product/search?utm_source=google&hl=pt-BR&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Histórico de Pesquisa
+                    </li>
+                </a>
+    
+                <a href="https://support.google.com/websearch/?visit_id=637935137788695688-1081031756&hl=pt-BR&rd=2#topic=3378866" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Ajuda de Pesquisa
+                    </li>
+                </a>
+    
+                <li class="cursor-pointer py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                    Enviar Feedback
+                </li>
+
+                <div id="barra" class="w-100 hidden sm:block h-[1px] bg-[#e4e4e4] mb-4"></div>
+    
+                <li 
+                    id="tema" 
+                    class="hidden cursor-pointer py-8 px-4 sm:px-6 sm:py-1 sm:block opacity-70 sm:hover:bg-zinc-300"
+                >
+                    Tema escuro: <span id="whiteDark">Desativado</span>
+                </li>
+            </ul>
         </div>
     </footer>
 
